@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 export const Header = styled.header`
     width: 97.5%;
@@ -85,3 +85,43 @@ export const BadgeWrapper = styled.div`
 export const Badge = styled.span`
   display: inline-block;
 `;
+
+// Filtragem
+export const Menu = styled.div`
+    position: absolute;
+    top: 85px;
+    left: 40%;
+    background-color: #191919;
+    color: #EEE;
+    border-radius: 24px;
+    width: 371px;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1000;
+    padding: 24px;
+`;
+
+interface ChipProps {
+  variant?: 'default' | 'outline';
+}
+
+export const Chip = styled.div<ChipProps>`
+  background-color: #313131;
+  height: 24px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  color: #EEE;
+  font-weight: 400;
+  margin: 4px;
+  font-size: 12px;
+  border-radius: 99px;
+  padding: 4.5px 12px 4.5px 12px;
+  ${({ variant }) =>
+    variant === 'outline' &&
+    css`
+      background-color: transparent;
+      border: 2px solid #313131;
+  `}
+`;
+

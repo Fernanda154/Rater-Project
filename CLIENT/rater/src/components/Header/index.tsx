@@ -1,4 +1,4 @@
-import {Header, Logo, SearchInput, SearchWrapper, IconWrapper, IconFilter, ContainerSearch, BadgeWrapper, Badge} from './style';
+import {Header, Logo, SearchInput, SearchWrapper, IconWrapper, IconFilter, ContainerSearch, BadgeWrapper, Badge, Menu, Chip} from './style';
 import LogoVector from '../../assets/logo.svg';
 import { Search, SlidersHorizontal } from 'lucide-react';
 import Button from '../Button';
@@ -26,6 +26,29 @@ export default function Nav(){
                             </BadgeWrapper>
                         )}
                     </IconFilter>
+                    <Menu >
+                        <Chip variant='outline'>
+                            Ficção científica
+                        </Chip>
+                        <Chip>
+                            Ação
+                        </Chip>
+                        <Chip>
+                            Aventura
+                        </Chip>
+                        <Chip>
+                            Comédia
+                        </Chip>
+                        <Chip>
+                            Terror
+                        </Chip>
+                        <Chip>
+                            Romance
+                        </Chip>
+                        <Chip>
+                            Drama
+                        </Chip>
+                    </Menu>
                 </ContainerSearch>                
                 <Button name='Login' />
             </Header>
