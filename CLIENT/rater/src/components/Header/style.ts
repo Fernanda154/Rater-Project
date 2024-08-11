@@ -1,7 +1,7 @@
 import styled, {css} from "styled-components";
 
 export const Header = styled.header`
-    width: 97.5%;
+    width: 100%;
     padding: 24px;
     background-color: #121212;
     display: flex;
@@ -55,7 +55,7 @@ export const ContainerSearch = styled.div`
     display: flex;
 `;
 
-export const IconFilter = styled.div`
+export const IconFilter = styled.button`
   display: flex;
   align-items: center;
   margin-left: 8px;
@@ -87,22 +87,51 @@ export const Badge = styled.span`
 `;
 
 // Filtragem
-export const Menu = styled.div`
+interface MenuProps {
+  $isVisible?: boolean;
+}
+export const Menu = styled.div<MenuProps>`
     position: absolute;
+    flex-wrap: wrap;
     top: 85px;
-    left: 40%;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #191919;
     color: #EEE;
     border-radius: 24px;
     width: 371px;
-    display: flex;
+    font-size: 12px;
+    display: ${({ $isVisible }) => ($isVisible ? 'flex' : 'none')};
     flex-wrap: wrap;
     z-index: 1000;
     padding: 24px;
+    .chakra-container{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+    hr{
+      margin-bottom: 8px;
+    }
+    .chakra-input{
+      display: flex;
+      flex-wrap: wrap;
+      border-radius: 12px;
+      height: 48px;
+      width: 46%;
+      margin: 4px;
+      background-color: #232323;
+      border: none;
+      color: #B4B4B4;
+
+    }
+    
 `;
 
 interface ChipProps {
-  variant?: 'default' | 'outline';
+  $variant?: 'default' | 'outline';
 }
 
 export const Chip = styled.div<ChipProps>`
@@ -117,8 +146,9 @@ export const Chip = styled.div<ChipProps>`
   font-size: 12px;
   border-radius: 99px;
   padding: 4.5px 12px 4.5px 12px;
-  ${({ variant }) =>
-    variant === 'outline' &&
+
+  ${({ $variant }) =>
+    $variant === 'outline' &&
     css`
       background-color: transparent;
       border: 2px solid #313131;

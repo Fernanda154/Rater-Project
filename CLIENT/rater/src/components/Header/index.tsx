@@ -1,9 +1,16 @@
 import {Header, Logo, SearchInput, SearchWrapper, IconWrapper, IconFilter, ContainerSearch, BadgeWrapper, Badge, Menu, Chip} from './style';
+import { Container, Divider, Input} from '@chakra-ui/react';
 import LogoVector from '../../assets/logo.svg';
-import { Search, SlidersHorizontal } from 'lucide-react';
+import { useState } from 'react';
+import { Search, SlidersHorizontal, ChevronDown } from 'lucide-react';
 import Button from '../Button';
 
 export default function Nav(){
+    const [visibleMenu, setVisibleMenu] = useState(false);
+    const toggleMenu = () => {
+        setVisibleMenu(prevState => !prevState);
+    };
+
     return (
         <>
             <Header>
@@ -18,7 +25,7 @@ export default function Nav(){
                             placeholder="Pesquisar"
                         />                    
                     </SearchWrapper>
-                    <IconFilter>
+                    <IconFilter onClick={toggleMenu}>
                         <SlidersHorizontal size={20} color="#EEE" />
                         {1 > 0 && (
                             <BadgeWrapper>
@@ -26,28 +33,41 @@ export default function Nav(){
                             </BadgeWrapper>
                         )}
                     </IconFilter>
-                    <Menu >
-                        <Chip variant='outline'>
-                            Ficção científica
-                        </Chip>
-                        <Chip>
-                            Ação
-                        </Chip>
-                        <Chip>
-                            Aventura
-                        </Chip>
-                        <Chip>
-                            Comédia
-                        </Chip>
-                        <Chip>
-                            Terror
-                        </Chip>
-                        <Chip>
-                            Romance
-                        </Chip>
-                        <Chip>
-                            Drama
-                        </Chip>
+                    <Menu $isVisible={visibleMenu}>
+                        <h1>Gêneros Cinematográficos</h1>
+                        <Container>
+                            <Chip >
+                                Ficção científica
+                            </Chip>
+                            <Chip>
+                                Ação
+                            </Chip>
+                            <Chip>
+                                Aventura
+                            </Chip>
+                            <Chip $variant='outline'>
+                                Comédia
+                            </Chip>
+                            <Chip $variant='outline'>
+                                Terror
+                            </Chip>
+                            <Chip $variant='outline'>
+                                Romance
+                            </Chip>
+                            <Chip $variant='outline'>
+                                Drama
+                            </Chip>
+                        </Container>
+
+                        Mostrar mais <ChevronDown size={20} color="#EEE" />
+                        <Divider />
+                        <h1>Data de lançamento</h1>
+                        <Container>
+                            <Input size='sm' type='date' />
+                            a
+                            <Input size='sm' type='date' />
+                        </Container>
+                        
                     </Menu>
                 </ContainerSearch>                
                 <Button name='Login' />

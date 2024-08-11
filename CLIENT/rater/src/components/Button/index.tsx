@@ -10,8 +10,8 @@ interface IProps {
 const Button: React.FC<IProps> = ({ name, iconButtom, color, onClick }) => {
     return (
         <CustonButton onClick={onClick} style={{ backgroundColor: color }}>
-            {iconButtom}
             {name}
+            {iconButtom}
         </CustonButton>
     );
 };

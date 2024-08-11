@@ -1,11 +1,16 @@
-import Nav from './components/Header'
+import Nav from './components/Header';
+import Highlights from './components/Highlights';
+import { ChakraProvider } from '@chakra-ui/react';
+
 
 function App() {
 
   return (
     <>
-      <Nav/>
-      
+      <ChakraProvider>
+        <Nav/>
+        <Highlights/>
+      </ChakraProvider>
     </>
   )
 }
