@@ -1,4 +1,4 @@
-import { Grid, GridItem, Image, Tag, TagLabel, TagLeftIcon, Text } from '@chakra-ui/react';
+import { Grid, GridItem, Tag, TagLabel, TagLeftIcon, Text } from '@chakra-ui/react';
 import {ContainerHighlights, InfoDetails, LabelCard} from './style';
 import { Flame, Star, Play } from 'lucide-react';
 import Button from '../Button';
@@ -10,7 +10,7 @@ import BannerTwisters from '../../assets/imgs/a037cb4d59865e40c4e8b3e373b40e62.p
 export default function Highlights(){
     return (
         <ContainerHighlights>
-            <Grid templateColumns='repeat(4, 1fr)' templateRows='29px repeat(4, 1fr)' gap={4} p={3}>
+            <Grid templateColumns='repeat(4, 1fr)' templateRows='29px repeat(3, 1fr)' gap={4} p={3}>
                 <GridItem rowSpan={4} colSpan={3} bgImage={Banner} borderRadius={24} bgRepeat={'no-repeat'} bgSize={'cover'}  >
                     <InfoDetails >
                         <div id='move'>
