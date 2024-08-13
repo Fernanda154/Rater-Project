@@ -8,6 +8,7 @@ export const ContainerLatest = styled.div`
     display: flex;
     color: #FFF;
     flex-wrap: wrap;
+    height: 400px;
     .slider-container{
         max-width: 100%;
         padding: 2em;
