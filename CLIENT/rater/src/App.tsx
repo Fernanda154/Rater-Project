@@ -2,6 +2,8 @@ import Nav from './components/Header';
 import Highlights from './components/Highlights';
 import LatestReleases from './components/LatestReleases';
 import AlreadyWatched from './components/AlreadyWatched';
+import Recommended from './components/Recommended';
+import Celebrities from './components/Celebrities';
 import { ChakraProvider } from '@chakra-ui/react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -16,6 +18,8 @@ function App() {
         <Highlights/>
         <LatestReleases/>
         <AlreadyWatched/>
+        <Recommended/>
+        <Celebrities/>
       </ChakraProvider>
     </>
   )
