@@ -20,6 +20,7 @@ function App() {
         <AlreadyWatched/>
         <Recommended/>
         <Celebrities/>
+        @ 2024 Rader. All rights reserved
       </ChakraProvider>
     </>
   )

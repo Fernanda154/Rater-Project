@@ -105,6 +105,7 @@ export const InfoDetails = styled.div`
         transform: translateY(0);
         transition: transform 100s;
         #move{
+            transition: transform 2s;
             transform: translateY(-10px);
         }
     }

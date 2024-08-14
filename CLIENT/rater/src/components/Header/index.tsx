@@ -4,6 +4,7 @@ import LogoVector from '../../assets/logo.svg';
 import { useState } from 'react';
 import { Search, SlidersHorizontal, ChevronDown } from 'lucide-react';
 import Button from '../Button';
+import FormLogin from '../Forms/FormLogin';
 
 export default function Nav(){
     const [visibleMenu, setVisibleMenu] = useState(false);
@@ -69,8 +70,8 @@ export default function Nav(){
                         </Container>
                         
                     </Menu>
-                </ContainerSearch>                
-                <Button name='Login' />
+                </ContainerSearch>     
+                <FormLogin/>           
             </Header>
         </>
     )

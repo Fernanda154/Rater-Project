@@ -33,7 +33,7 @@ const Celebrities: React.FC = () => {
     ];
     const settings = {
         dots: false,
-        speed: 600,
+        speed: 500,
         slidesToShow: 5,
         slidesToScroll: 6
     };

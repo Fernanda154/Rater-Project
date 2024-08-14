@@ -26,6 +26,8 @@ export const CardCarousel = styled.div<BackgroundProp>`
     border-radius: 24px;
     background-image:  url(${props => props.$bgImage});
     background-size: cover;
+    display: flex;
+    align-items: end;
     background-position: center;
 `;
 
