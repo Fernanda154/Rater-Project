@@ -3,7 +3,6 @@ import { Container, Divider, Input} from '@chakra-ui/react';
 import LogoVector from '../../assets/logo.svg';
 import { useState } from 'react';
 import { Search, SlidersHorizontal, ChevronDown } from 'lucide-react';
-import Button from '../Button';
 import FormLogin from '../Forms/FormLogin';
 
 export default function Nav(){

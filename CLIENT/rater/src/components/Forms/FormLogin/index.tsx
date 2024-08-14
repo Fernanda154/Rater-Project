@@ -32,7 +32,6 @@ export default function FormLogin(){
         <Modal isOpen={isOpen} id='modal'  onClose={onClose} isCentered>
           <ModalOverlay bgColor={'#00000099'} filter='auto' blur='2px'/>
 
-
           {
           formRegister?
             <ModalContent p={12}  backgroundColor={'#121212'} color={"#EEE"} alignItems={'center'} borderRadius={'24px'} border={'4px'} borderColor={'#232323'}>
@@ -105,8 +104,6 @@ export default function FormLogin(){
               </ModalBody>           
             </ModalContent>
           }
-
-          
         </Modal>
       </FormContainer>
     )

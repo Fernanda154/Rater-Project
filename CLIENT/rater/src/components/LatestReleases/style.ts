@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import React from "react";
-
+const defaultImg = "../../assets/logo.svg";
 export const ContainerLatest = styled.div`
     display: flex;
     padding: 0.5em 2em 0.5em 2em;
@@ -18,13 +17,13 @@ export const ContainerLatest = styled.div`
     }
 `;
 interface BackgroundProp {
-    $bgImage?: React.ReactNode;
+    $bgImage?: string;
 }
 export const CardCarousel = styled.div<BackgroundProp>`
     width: 340px;
     height: 250px;
     border-radius: 24px;
-    background-image:  url(${props => props.$bgImage});
+    background-image:  url(${props => props.$bgImage || defaultImg});
     background-size: cover;
     display: flex;
     align-items: end;

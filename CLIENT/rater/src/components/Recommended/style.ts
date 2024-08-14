@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import React from "react";
 
 export const ContainerLatest = styled.div`
     display: flex;
@@ -18,7 +17,7 @@ export const ContainerLatest = styled.div`
     }
 `;
 interface BackgroundProp {
-    $bgImage?: React.ReactNode;
+    $bgImage?: string;
 }
 export const CardCarousel = styled.div<BackgroundProp>`
     width: 340px;
