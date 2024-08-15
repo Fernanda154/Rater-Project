@@ -28,7 +28,7 @@ Teste de desenvolvimento FullStack de uma plataforma de streaming.
 |  ![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white) |  Typescript |  Tecnologia utilizada no front-end | 
 |  ![Nest](https://img.shields.io/badge/nestjs-e0234e?style=for-the-badge&logo=nestjs&logoColor=white) |  Nest |  Tecnologia utilizada no back-end | 
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white) |  PostgreSQL |  SGBD utilizado no projeto | 
-|  ![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=white) |  Swagger |  Rotas do backend disponíveis em: http://localhost:8000/swagger/ | 
+|  ![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=white) |  Swagger |  Rotas do backend disponíveis em: http://localhost:3006/api | 
 |  ![VSCode](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white) |  Visual Studio Code |  Editor de código utilizado no projeto | 
 
 ## Visual
