@@ -12,6 +12,7 @@
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "dev": "ts-node-dev --transpile-only src/main.ts",
+    "vercel-build": "typeorm-ts-node-commonjs migrations:run -d data-source.ts",
     "typeorm": "typeorm-ts-node-commonjs",
     "seed": "ts-node ./database/seeds/userSeed.seed.ts",
     "start:prod": "node dist/main",
